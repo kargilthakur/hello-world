@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	//code
+	int n;
+	cin>>n;
+	for(int i=0;i<n;i++)
+	{
+	   int size;
+	   cin>>size;
+	   int j=0,k=0;
+	   int arr[1000000];
+	   for(j=0;j<size;j++)
+	   {
+	       cin>>arr[j];
+	   }
+	   for(j=0;j<size;j++)
+	   {
+	   int flag=0;
+
+	       for(k=j+1;k<size;k++)
+	       {
+	           if(arr[k]>arr[j])
+	           {  
+	               flag=1;
+	               break;
+	           }
+	       }
+	   if(flag==0)
+	   {
+	       cout<<arr[j]<<" ";
+	   }
+	}
+	cout<<"\n";
+	    
+	}
+	
+	return 0;
+}
